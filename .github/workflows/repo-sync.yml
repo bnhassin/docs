@@ -16,7 +16,7 @@ env:
 jobs:
   check-freezer:
     name: Check for deployment freezes
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
 
     - name: Exit if repo is frozen
@@ -28,7 +28,7 @@ jobs:
   repo-sync:
     name: Repo Sync
     needs: check-freezer
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
 
     - name: Check out repo
